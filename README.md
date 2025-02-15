@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/N9dgpOB.png" alt="dokuwiki logo"/>
 </p>
 
-<h1>osTicket - Prerequisites and Installation</h1>
+<h1>DokuWiki - Prerequisites and Installation</h1>
 This guide outlines the prerequisites and installation of the open-source knowledge base software DokuWiki.<br />
 
 
