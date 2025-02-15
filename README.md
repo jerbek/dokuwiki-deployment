@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="dokuwiki logo"/>
+<img src="https://imgur.com/N9dgpOB" alt="dokuwiki logo"/>
 </p>
 
 <h1>osTicket - Prerequisites and Installation</h1>
