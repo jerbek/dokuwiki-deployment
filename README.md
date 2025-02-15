@@ -3,7 +3,7 @@
 </p>
 
 <h1>osTicket - Prerequisites and Installation</h1>
-This guide outlines the prerequisites and installation of the open-source knowledge base DokuWiki.<br />
+This guide outlines the prerequisites and installation of the open-source knowledge base software DokuWiki.<br />
 
 
 <h2>Environments and Technologies Used</h2>
