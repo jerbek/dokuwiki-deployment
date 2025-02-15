@@ -21,6 +21,12 @@ This guide outlines the prerequisites and installation of the open-source knowle
 
 - php
 - php-fpm
+- php-json
+- php-gd
+- php-intl
+- php-mbstring
+- php-zip
+- php-xml
 - php-ldap
 
 <h2>Installation Steps</h2>
