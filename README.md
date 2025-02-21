@@ -19,6 +19,7 @@ This guide outlines the prerequisites and installation of the open-source knowle
 
 <h2>List of Prerequisites</h2>
 
+- apache2
 - php
 - php-fpm
 - php-json
@@ -27,12 +28,11 @@ This guide outlines the prerequisites and installation of the open-source knowle
 - php-mbstring
 - php-zip
 - php-xml
-- php-ldap
 
 <h2>Installation Steps</h2>
 
 <p>
-  Deploy an Ubuntu VM with your ssh keys
+  Deploy an Ubuntu VM with your SSH keys and install Tailscale (register and install this on your PC if you haven't already)
 </p>
 <p>
 <img src="https://github.com/user-attachments/assets/5829c5c1-aa83-48e8-837e-fd86d528b068" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -40,17 +40,47 @@ This guide outlines the prerequisites and installation of the open-source knowle
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  Make an A record in your Windows DNS server pointing towards the Ubuntu VM's internal Tailscale IP then add an entry for Magic DNS in Tailscale's admin console
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ Disable the open SSH port in your Ubuntu VM's Azure network settings and connect via the Tailscale IP</p>
+<p>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
+<p>
+  Install all the prereqs with <code>sudo apt update && sudo apt install -y apache2 libapache2-mod-php php php-fpm php-json php-gd php-intl php-mbstring php-zip php-xml php-ldap</code>
+<p>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
+<p>
+  Choose what DokuWiki download you want from the official website and wget get the download URL on your VM
+<p>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
+<p>
+  Extract your DokuWiki archive to /var/www/html and change the ownership so the web server might use it with <code>sudo chown www-data:www-data -R /var/www/html</code>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  For basic security, change the permissions of your web directory with <code>sudo chmod 770 -R /var/www/html</code> and <code>sudo chmod 775 -R /var/www/html/data/cache</code>
+</p>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
+<p>
+  Open your website and finish the installation
+</p>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
