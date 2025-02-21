@@ -79,7 +79,82 @@ This guide outlines the prerequisites and installation of the open-source knowle
 <br />
 
 <p>
-  Open your website and finish the installation
+  Open your website via your internal domain and finish the installation
+</p>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
+<p>
+  Configure the apache2 site for rewrite and denying access to sensitive directories by putting the following inside the VirtualHost block of /etc/apache2/sites-available/000-default.conf
+  <pre>
+<code>
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+
+    <Directory /var/www/html/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride None
+        Require all granted
+
+	# Redirect to clean URLs
+ 	<IfModule mod_rewrite.c>
+		RewriteEngine on
+		RewriteBase /
+
+		RewriteRule ^_media/(.*)              lib/exe/fetch.php?media=$1  [QSA,L]
+		RewriteRule ^_detail/(.*)             lib/exe/detail.php?media=$1 [QSA,L]
+		RewriteRule ^_export/([^/]+)/(.*)     doku.php?do=export_$1&id=$2 [QSA,L]
+		RewriteRule ^$                       doku.php  [L]
+		RewriteCond %{REQUEST_FILENAME}       !-f
+		RewriteCond %{REQUEST_FILENAME}       !-d
+		RewriteRule (.*)                      doku.php?id=$1  [QSA,L]
+	</IfModule>
+   </Directory>
+
+
+    # Block access to sensitive folders
+    <Directory /var/www/html/data>
+	Require local
+	Deny from all
+	Allow from 127.0.0.1
+	Satisfy All
+    </Directory>
+    <Directory /var/www/html/conf>
+	Require local
+	Deny from all
+	Allow from 127.0.0.1
+	Satisfy All
+    </Directory>
+    <Directory /var/www/html/bin>
+	Require local
+	Deny from all
+	Allow from 127.0.0.1
+	Satisfy All
+    </Directory>
+    <Directory /var/www/html/inc>
+	Require local
+	Deny from all
+	Allow from 127.0.0.1
+	Satisfy All
+    </Directory>
+    <Directory /var/www/html/vendor>
+	Require local
+	Deny from all
+	Allow from 127.0.0.1
+	Satisfy All
+    </Directory>
+</code>
+</pre>
+</p>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
+<p>
+  Configure to taste
 </p>
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
