@@ -76,7 +76,7 @@ This guide outlines the prerequisites and installation of the open-source knowle
 <br />
 
 <p>
-  Open your website via your internal domain and finish the installation
+  Open your website via your internal domain and finish the web installation
 </p>
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -146,13 +146,12 @@ This guide outlines the prerequisites and installation of the open-source knowle
 </code>
 </pre>
 </p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
 <p>
-  Configure to taste
+  Set the "Nice URLS" setting in the admin config to .htaccess. Then configure to taste.
 </p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/01408d6a-8063-4a68-af90-dce18529ed86" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
