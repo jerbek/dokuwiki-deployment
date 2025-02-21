@@ -54,14 +54,13 @@ This guide outlines the prerequisites and installation of the open-source knowle
 <p>
   Install all the prereqs with <code>sudo apt update && sudo apt install -y apache2 libapache2-mod-php php php-fpm php-json php-gd php-intl php-mbstring php-zip php-xml php-ldap</code>
 <p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
 <p>
   Choose what DokuWiki download you want from the official website and wget get the download URL on your VM
 <p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/70895023-9e18-42ca-beef-ca45a4ca1a92" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
@@ -71,14 +70,10 @@ This guide outlines the prerequisites and installation of the open-source knowle
 <p>
   For basic security, change the permissions of your web directory with <code>sudo chmod 770 -R /var/www/html</code> and <code>sudo chmod 775 -R /var/www/html/data/cache</code>
 </p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<br />
-
 <p>
   Open your website via your internal domain and finish the web installation
 </p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/bb6a649f-13e6-41b2-9d91-390aa4398cb3" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
