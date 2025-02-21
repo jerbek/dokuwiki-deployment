@@ -20,6 +20,7 @@ This guide outlines the prerequisites and installation of the open-source knowle
 <h2>List of Prerequisites</h2>
 
 - apache2
+- libapache2-mod-php
 - php
 - php-fpm
 - php-json
@@ -43,14 +44,10 @@ This guide outlines the prerequisites and installation of the open-source knowle
   Make an A record in your Windows DNS server pointing towards the Ubuntu VM's internal Tailscale IP then add an entry for Magic DNS in Tailscale's admin console
 </p>
 <p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<br />
-
-<p>
  Disable the open SSH port in your Ubuntu VM's Azure network settings and connect via the Tailscale IP</p>
 <p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p>
+<img src="https://github.com/user-attachments/assets/0fbea5ea-74ac-43df-ae17-ff82ec3f4c95" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
